@@ -1,0 +1,64 @@
+{% extends 'basic.html' %}
+{% block title %}ALL songs {% endblock %}
+
+
+{% block body %}
+<head>
+   {% load static %} 
+<style>
+.background-image{
+    background-image: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 150vh;
+}
+</style>
+</head>
+<div class ="background-image">
+    <div style="padding-top: 10%; padding-left: 20%; padding-right: 25%;">
+        <h3 style="padding-left: 30%;"> UPLOAD PODCAST DETAILS </h3>
+        <h3 style="padding-left: 30%; color: green;">{{n}}</h3>
+        <form method = "post"  action="{% url 'podcast_upload' %}" enctype="multipart/form-data"> {% csrf_token %}
+            <div class="mb-1">
+              <div class = "form-group">
+              <label  class="form-label"><h5 style="color:black">Name</h5></label>
+              <input type="name" class="form-control" placeholder="name" name="name" id ="name">
+            </div>
+          </div>
+          <div class="mb-1">
+            <div class = "form-group">
+            <label  class="form-label"><h5 style="color:black">podcaster</h5></label>
+            <input type="text" class="form-control" placeholder="podcaster" name="podcaster" id ="podcaster">
+          </div>
+        </div>
+        <div class="mb-1">
+          <div class = "form-group">
+          <label  class="form-label"><h5 style="color:black">Tags</h5></label>
+          <input type="text" class="form-control" placeholder="Tags" name="tags" id ="tags">
+        </div>
+      </div>
+
+           
+
+          <div class = "form-group">
+            <label class="form-label" for="customFile"><h5>Upload your podcast</h5></label>
+            <input type="file" class="form-control" id="customFile" name="audio">
+          </div>
+
+          <div class = "form-group">
+            <label class="form-label" for="customFile"><h5>Image</h5></label>
+            <input type="file" class="form-control" id="customFile" name="img"  >
+          </div>
+
+            <div style="padding-top: 4%;">
+           
+              <button type="submit" class="btn btn-primary">Upload!....</button>
+            
+          </div>
+          </form>
+         
+
+</div>
+</div>
+{% endblock %}

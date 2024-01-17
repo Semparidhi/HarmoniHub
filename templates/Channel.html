@@ -1,0 +1,36 @@
+{% extends 'basic.html' %}
+{% block title %}ALL songs {% endblock %}
+
+
+{% block body %}
+<head>
+   {% load static %} 
+<style>
+.background-image{
+    background-image: linear-gradient(to right, black 0%, #434343 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+}
+</style>
+</head>
+<div class ="background-image">
+<img src="{% static 'img\bg-img\bg-1.jpg'%}" alt="">
+<div class="card-img-overlay" style="padding-top: 20%;">
+
+    <h1 style="color: rgba(64, 64, 242, 0.911)">Are you looking for a new way to upload your music and share it with the world?</h1>
+        <h5 style="color: purple"> Look no further than our website! We offer a simple and secure platform for uploading your audio files, so you can easily share them with friends and family. Our site also allows you to instantly access your music library from any device. With just one sound, you can reach an unlimited amount of people. Upload your music today on our website!</h5>
+        <div style="padding-top: 5%;">
+            
+        <a href="{% url 'music_upload_singer'%}"><h3 style="color: white;">click here to   register singer.... </h3></a>
+    </div>
+    <a href="{% url 'music_upload_song'%}"><h3 style="color: white;">click here to upload MUSIC   if singer is Registered</h3></a>
+        <div style="padding-top: 5%;">
+            <a href="{% url 'podcast_upload'%}"><h3 style="color: white;">click here to upload PODCAST</h3></a>
+        
+    </div>
+
+</div>
+</div>
+{% endblock %}

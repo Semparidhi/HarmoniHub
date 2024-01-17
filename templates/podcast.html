@@ -1,0 +1,54 @@
+{% extends 'basic.html' %}
+{% block title %}ALL songs {% endblock %}
+
+
+{% block body %}
+<head>
+   {% load static %} 
+<style>
+.background-image{
+    background-image: linear-gradient(to right, black 0%, #434343 100%);
+    background-size: cover;
+    background-repeat: repeat;
+    
+    height: 400vh;
+}
+</style>
+</head>
+<div class ="background-image">
+    <div style="padding-top: 10%;">
+        <!-- ##################### card start area    ################## -->
+        <div class="row">
+            {% for i in pod %}
+            <div style="padding-top: 2%;padding-left: 3%;padding-right: 3%;">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="/media/{{i.image}}" class="img-fluid rounded-start" alt="..." style="height: 300px; width: 500px;" >
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h4 class="card-title">{{i.podcaster}}</h4    >
+                  <p class="card-text">{{i.name}}</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 min ago</small></p>
+                  <audio preload="auto" controls style="color:black;">
+                    <source src="/media/{{i.audio}}">
+                </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          {% endfor %}
+        </div>
+
+    
+    
+    
+    
+    
+    
+    
+    </div>
+</div>
+{% endblock %}

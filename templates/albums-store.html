@@ -1,0 +1,261 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>One Music - Modern Music </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico'%}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+
+</style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    
+    {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>One Music - Modern Music </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico'%}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+
+</style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="{% url 'home'%}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{% url 'home'%}">Home</a></li>
+                                    <li><a href="{% url 'albums'%}">Albums</a></li>
+                                    <li><a href="{% url 'podcast'%}">Podcast</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'home'%}">Home</a></li>
+                                            <li><a href="{% url 'albums'%}">Albums</a></li>
+                                            <li><a href="{% url 'podcast'%}">Podcast</a></li>
+                                            <li><a href="{% url 'Channel'%}">Channel</a></li>
+
+                                            <li><a href="{% url 'logout' %} ">Logout</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'Channel'%}">Channel</a></li>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+                                    <div class="login-register-btn mr-50">
+                                        <a href="{% url 'logout' %}" id="loginBtn">Logout</a>
+                                    </div>
+
+                                    <!-- Cart Button -->
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Header Area End ##### -->
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay">
+        <img src="{%static 'img/bg-img/bg-4.jpg'%}" alt="" style="height: 380px; width: 1400px;">
+        <div class="bradcumbContent">
+            <p>See what’s new</p>
+            <h2>Latest Albums</h2>
+            
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Album Catagory Area Start ##### -->
+    <section class="album-catagory section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form class="d-flex" style="padding-top: 3%;padding-bottom: 5%;"
+                    action="{% url 'search' %}" method="POST">
+                    {% csrf_token %} 
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="name" >
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+                </div>
+            </div>
+
+            <div class="row oneMusic-albums">
+
+                <!-- Single Album -->
+                    
+
+                
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Album Catagory Area End ##### -->
+
+    <!-- ##### Buy Now Area Start ##### -->
+    <div class="oneMusic-buy-now-area mb-100">
+        <div class="container">
+            <div class="row">
+                {% for i in playlist %}
+                <div style="padding-left:2%; padding-bottom: 2%; padding-top: 2%;padding-right: 2%;">
+                <div class="card" style="width: 18rem;">
+                   <a href="/album_play/{{i.album_name}}"> <img src="/media/{{i.image}}" class="card-img-top" alt="..." style="height: 500; width: 500;"></a>
+                    <div class="card-body">
+                      <h3 class="card-text">{{i.album_name}}</h3>
+                    </div>
+                  </div> 
+                </div>
+                  {% endfor %}
+                
+
+            </div>
+
+            
+        </div>
+    </div>
+    <!-- ##### Buy Now Area End ##### -->
+
+    <!-- ##### Add Area Start ##### -->
+    <div class="add-area mb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="adds">
+                        <a href="#"><img src="img/bg-img/add3.gif" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Add Area End ##### -->
+
+    
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white">
+                        <img src="{% static 'img/bg-img/bg-2.jpg'%}" alt="" style="height: 500px; width: 1500px;">
+                        <h2>One Sound</h2>
+                    </div>
+                </div>
+            </div>
+
+            
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js'%}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js'%}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js'%}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js'%}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js'%}"></script>
+</body>
+
+</html>

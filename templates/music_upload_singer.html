@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% block title %}ALL songs {% endblock %}
+
+
+{% block body %}
+<head>
+   {% load static %} 
+<style>
+.background-image{
+    background-image: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    height: 200vh;
+}
+</style>
+</head>
+<div class ="background-image">
+    <div style="padding-top: 10%; padding-left: 20%; padding-right: 25%;">
+        <h3 style="padding-left: 30%;"> UPLOAD SINGER DETAILS</h3>
+        <h3 style="padding-left: 30%; color: green;">{{n}}</h3>
+        <form method = "post"  action="{% url 'music_upload_singer' %}" enctype="multipart/form-data"> {% csrf_token %}
+            <div class="mb-1">
+              <div class = "form-group">
+              <label  class="form-label"><h5 style="color:black">Singer name</h5></label>
+              <input type="name" class="form-control" placeholder="Singer_name" name="Singer_name" id ="Singer_name">
+            </div>
+          </div>
+            <div class = "form-group">
+            <label class="form-label" for="customFile"><h5>Singer image</h5></label>
+            <input type="file" class="form-control" id="customFile" name="Singer_image" id ="Singer_image" >
+          </div>
+            <div style="padding-top: 4%;">
+           
+              <button type="submit" class="btn btn-primary">Register</button>
+            
+          </div>
+          <a href="{% url 'music_upload_song' %}">
+            already Registered! 
+          </a>
+          </form>
+         
+
+</div>
+</div>
+{% endblock %}

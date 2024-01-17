@@ -1,0 +1,580 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>One Music - Modern Music </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico'%}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <style>
+
+</style>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="oneMusic-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="oneMusicNav">
+
+                        <!-- Nav brand -->
+                        <a href="{% url 'home'%}" class="nav-brand"><img src="{% static 'img/core-img/logo.png' %}" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{% url 'home'%}">Home</a></li>
+                                    <li><a href="{% url 'albums'%}">Albums</a></li>
+                                    <li><a href="{% url 'podcast'%}">Podcast</a></li>
+                                    <li><a href="#">Pages</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'home'%}">Home</a></li>
+                                            <li><a href="{% url 'albums'%}">Albums</a></li>
+                                            <li><a href="{% url 'podcast'%}">Podcast</a></li>
+                                            <li><a href="{% url 'Channel'%}">Channel</a></li>
+
+                                            <li><a href="{% url 'logout' %} ">Logout</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'Channel'%}">Channel</a></li>
+                                </ul>
+
+                                <!-- Login/Register & Cart Button -->
+                                <div class="login-register-cart-button d-flex align-items-center">
+                                    <!-- Login/Register -->
+                                    <div class="login-register-btn mr-50">
+                                        <a href="{% url 'logout' %}" id="loginBtn">Logout</a>
+                                    </div>
+
+                                    <!-- Cart Button -->
+                                    <div class="cart-btn">
+                                        <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-slides owl-carousel">
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img">
+                    <img src="{%static 'img/bg-img/bg-1.jpg'%}" alt="">
+                </div>
+                <!-- Slide Content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Latest album</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Beyond Time <span>Beyond Time</span></h2>
+                                <a data-animation="fadeInUp" data-delay="300ms" href="#" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Slide -->
+            <div class="single-hero-slide d-flex align-items-center justify-content-center">
+                <!-- Slide Img -->
+                <div class="slide-img bg-img"><img src="{%static 'img/bg-img/bg-3.jpg'%}" alt=""></div>
+                <!-- Slide Content -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-slides-content text-center">
+                                <h6 data-animation="fadeInUp" data-delay="100ms">Latest album</h6>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Colorlib Music <span>Colorlib Music</span></h2>
+                                <a data-animation="fadeInUp" data-delay="300ms" href="#" class="btn oneMusic-btn mt-50">Discover <i class="fa fa-angle-double-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Latest Albums Area Start ##### -->
+    <section class="latest-albums-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading style-2">
+                        <p>See what’s new</p>
+                        <h2 style="font-weight: 900;">Latest Albums</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-9">
+                    <div class="ablums-text text-center mb-70">
+                        <h6>Late-night longing comes into play in "Little Freak," a soft, melodic track about a relationship that slipped through Harry's fingers before it could ever start. "I disrespected you / Jumped in feet first and I landed too hard," he confesses during the song's middle eight. "You never saw my birthmark." Now, as he reflects on what could have been, he sings, "I'm not worried about where you are / Or who you will go home to / I'm just thinking about you."</h6>
+                    </div>
+                </div>
+            </div>
+            <h2>Made for you</h2>
+        <!-- ############### songs ############################3 -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="albums-slideshow owl-carousel">  
+                        {% for i in song %}
+                        <div class="single-album">
+                            <img src="/media/{{i.image}}" alt="" style="height: 300px;width: 300px;">
+                            <div class="album-info">
+                                <a href="/play/{{i.song_id}}">
+                                    <h4>{{i.name}}</h4>
+                                    <h5>singer:{{i.singer}}</h5>
+                                    click to play
+                                </a>
+                            
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ##### Latest Albums  ##### -->
+
+    <!-- ##### Buy Now Area Start ##### -->
+    <section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading style-2">
+                        <img src="{% static '\img\bg-img\anh.png' %}" alt="" style="height: 500px; width: 900px;">
+                        
+                        <h3> Put on your hearphones</h3>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Romance with Sid Sriram</h2>
+            <div class="row">
+
+                <!-- Single Album Area -->
+                {% for i in sid %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                    <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
+                        <div class="album-thumb">
+                            <img src="/media/{{i.image}}" alt="" style="height: 300px; width: 300px;">
+
+                            <div class="play-icon">
+                                <a href="/play/{{i.song_id}}" ><span class="icon-play-button"></span></a>
+                            </div>
+                        </div>
+                        <div class="album-info">
+                            <a href="/play/{{i.song_id}}">
+                                <h5>{{i.name}}</h5>
+                            </a>
+                            <p>{{i.tags}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Album Area -->
+                <!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ##### Buy Now Area End ##### -->
+
+    <!-- ##### Featured Artist Area Start ##### -->
+    <section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url(img/bg-img/bg-4.jpg);">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="featured-artist-thumb">
+                        <img src="{% static '\img\bg-img\soul_of_varisu.jpg' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="featured-artist-content">
+                        <!-- Section Heading -->
+                        <div class="section-heading white text-left mb-30">
+                            
+                        </div>
+                        {% for i in main %}
+                        <h1 style="padding-bottom: 10%;">{{i.name}}</h1>
+                        <h2>{{i.tags}}</h2>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>01. Main Hit Song</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="/media/{{i.song}}">
+                            </audio>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Featured Artist Area End ##### -->
+
+    <!-- ##### Miscellaneous Area Start ##### -->
+    <section class="miscellaneous-area section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <!-- ***** Weeks Top ***** -->
+                <div class="col-12 col-lg-4">
+                    <div class="weeks-top-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>See what’s new</p>
+                            <h2>This week’s top</h2>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="100ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt1.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>Sam Smith</h6>
+                                <p>Underground</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="150ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt2.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>Power Play</h6>
+                                <p>In my mind</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="200ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt3.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>Cristinne Smith</h6>
+                                <p>My Music</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="250ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt4.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>The Music Band</h6>
+                                <p>Underground</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="300ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt5.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>Creative Lyrics</h6>
+                                <p>Songs and stuff</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="350ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img/bg-img/wt6.jpg'%}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>The Culture</h6>
+                                <p>Pop Songs</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ***** New Hits Songs ***** -->
+                <div class="col-12 col-lg-4">
+                    <div class="new-hits-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>See what’s new</p>
+                            <h2>New Hits</h2>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="100ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt7.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>Sam Smith</h6>
+                                    <p>Underground</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="/media/{{song.song}}">
+                            </audio>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="150ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt8.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>Power Play</h6>
+                                    <p>In my mind</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="200ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt9.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>Cristinne Smith</h6>
+                                    <p>My Music</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="250ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt10.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>The Music Band</h6>
+                                    <p>Underground</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="300ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt11.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>Creative Lyrics</h6>
+                                    <p>Songs and stuff</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+
+                        <!-- Single Top Item -->
+                        <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="350ms">
+                            <div class="first-part d-flex align-items-center">
+                                <div class="thumbnail">
+                                    <img src="img/bg-img/wt12.jpg" alt="">
+                                </div>
+                                <div class="content-">
+                                    <h6>The Culture</h6>
+                                    <p>Pop Songs</p>
+                                </div>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="audio/dummy-audio.mp3">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ***** Popular Artists ***** -->
+                <div class="col-12 col-lg-4">
+                    <div class="popular-artists-area mb-100">
+                        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                            <p>music world  Rulers</p>
+                            <h2>Popular Artist</h2>
+                        </div>
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\Anirudh Ravichander.jpg' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>Anirudh Ravichander</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="150ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\Sid sriram.jpg' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>Sid sriram</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="200ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\yuvan shankar raja.jpg' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>yuvan shankar raja</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="250ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\Sid sriram.jpg' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>vijay prakash</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="300ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\#ARRahman (1).jpg' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>A R Rahman</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Artist -->
+
+                        <!-- Single Artist -->
+                        <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="400ms">
+                            <div class="thumbnail">
+                                <img src="{% static 'img\bg-img\Shreya Ghoshal Wallpapers' %}" alt="">
+                            </div>
+                            <div class="content-">
+                                <p>Shreya Ghoshal</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Area End ##### -->
+
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" >
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading white wow fadeInUp" data-wow-delay="100ms">
+                        <p>See what’s new</p>
+                        <h2>JUST ONE SOUND
+                            <img src="{% static 'img\bg-img\U1.jpg' %}" alt="">
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Contact Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row d-flex flex-wrap align-items-center">
+                <div class="col-12 col-md-6">
+                    <a href="#"><img src="img/core-img/logo.png" alt=""></a>
+                    <p class="copywrite-text"><a href="#">
+                    Copyright@2023 All rights reserved by SEMPARIDHI 
+</p>
+
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'js/jquery/jquery-2.2.4.min.js'%}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'js/bootstrap/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap/bootstrap.min.js'%}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'js/plugins/plugins.js'%}"></script>
+    <!-- Active js -->
+    <script src="{% static 'js/active.js' %}"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+{% extends 'basic.html' %}
+{% block title %}ALL songs {% endblock %}
+
+
+{% block body %}
+<head>
+   {% load static %} 
+<style>
+.background-image{
+    background-image: linear-gradient(to right, black 0%, #434343 100%);
+    background-size: cover;
+    background-repeat: repeat;
+    
+    height: 400vh;
+}
+</style>
+</head>
+<div class="background-image">
+    <h1 style="color: white">{{pylist.album_name}}</h1>
+<div class="row">
+    <div style="padding-top: 10%;padding-left: 4%;">
+        
+        <div class="card" style="width: 18rem;">
+            <a href="/play/{{pylist.song11.song_id}}"><img src="/media/{{pylist.song11.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+            <div class="card-body">
+              <h3 class="card-text">{{pylist.song11.name}}</h3>
+              <h6 class="card-text">{{pylist.song11.tags}}</h6>
+            </div>
+        </a>
+          </div>
+   </div>
+
+   <div style="padding-top: 10%;padding-left: 4%;">   
+    <div class="card" style="width: 18rem;">
+        <a href="/play/{{pylist.song22.song_id}}"><img src="/media/{{pylist.song22.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+        <div class="card-body">
+          <h3 class="card-text">{{pylist.song22.name}}</h3>
+          <h6 class="card-text">{{pylist.song22.tags}}</h6>
+        </div>
+    </a>
+      </div>
+    </div>
+
+   <div style="padding-top: 10%;padding-left: 4%;">   
+    <div class="card" style="width: 18rem;">
+        <a href="/play/{{pylist.song33.song_id}}"><img src="/media/{{pylist.song33.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+        <div class="card-body">
+          <h3 class="card-text">{{pylist.song33.name}}</h3>
+          <h6 class="card-text">{{pylist.song33.tags}}</h6>
+        </div>
+    </a>
+      </div>
+    </div>
+   <div style="padding-top: 10%;padding-left: 4%;">   
+    <div class="card" style="width: 18rem;">
+        <a href="/play/{{pylist.song44.song_id}}"><img src="/media/{{pylist.song44.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+        <div class="card-body">
+          <h3 class="card-text">{{pylist.song44.name}}</h3>
+          <h6 class="card-text">{{pylist.song44.tags}}</h6>
+        </div>
+    </a>
+      </div>
+    </div>
+
+    <div style="padding-top: 10%;padding-left: 4%;">   
+        <div class="card" style="width: 18rem;">
+            <a href="/play/{{pylist.song55.song_id}}"><img src="/media/{{pylist.song55.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+            <div class="card-body">
+              <h3 class="card-text">{{pylist.song55.name}}</h3>
+              <h6 class="card-text">{{pylist.song55.tags}}</h6>
+            </div>
+        </a>
+          </div>
+        </div>
+
+        <div style="padding-top: 10%;padding-left: 4%;">   
+            <div class="card" style="width: 18rem;">
+                <a href="/play/{{pylist.song66.song_id}}"><img src="/media/{{pylist.song66.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+                <div class="card-body">
+                  <h3 class="card-text">{{pylist.song66.name}}</h3>
+                  <h6 class="card-text">{{pylist.song66.tags}}</h6>
+                </div>
+            </a>
+              </div>
+            </div>
+
+            <div style="padding-top: 10%;padding-left: 4%;">   
+                <div class="card" style="width: 18rem;">
+                    <a href="/play/{{pylist.song77.song_id}}"><img src="/media/{{pylist.song77.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+                    <div class="card-body">
+                      <h3 class="card-text">{{pylist.song77.name}}</h3>
+                      <h6 class="card-text">{{pylist.song77.tags}}</h6>
+                    </div>
+                </a>
+                  </div>
+                </div>
+
+                <div style="padding-top: 10%;padding-left: 4%;">   
+                    <div class="card" style="width: 18rem;">
+                        <a href="/play/{{pylist.song88.song_id}}"><img src="/media/{{pylist.song88.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+                        <div class="card-body">
+                          <h3 class="card-text">{{pylist.song88.name}}</h3>
+                          <h6 class="card-text">{{pylist.song88.tags}}</h6>
+                        </div>
+                    </a>
+                      </div>
+                    </div>
+
+                    <div style="padding-top: 10%;padding-left: 4%;">   
+                        <div class="card" style="width: 18rem;">
+                            <a href="/play/{{pylist.song99.song_id}}"><img src="/media/{{pylist.song99.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+                            <div class="card-body">
+                              <h3 class="card-text">{{pylist.song99.name}}</h3>
+                              <h6 class="card-text">{{pylist.song99.tags}}</h6>
+                            </div>
+                        </a>
+                          </div>
+                        </div>
+
+                        <div style="padding-top: 10%;padding-left: 4%;">   
+                            <div class="card" style="width: 18rem;">
+                                <a href="/play/{{pylist.song100.song_id}}"><img src="/media/{{pylist.song100.image}}" class="card-img-top" alt="" style="height: 300px; width: 300px;">
+                                <div class="card-body">
+                                  <h3 class="card-text">{{pylist.song100.name}}</h3>
+                                  <h6 class="card-text">{{pylist.song100.tags}}</h6>
+                                </div>
+                            </a>
+                              </div>
+                            </div>
+
+
+
+</div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{% endblock %}
