@@ -1,8 +1,8 @@
 # Welcome to HarmoniHub 🎶
 
 HarmoniHub is your go-to destination for an immersive musical experience! It's a dynamic and user-friendly music platform powered by Django, offering a personalized space for music enthusiasts around the world.
-
-[![Watch the demo](https://img.youtube.com/vi/lAq4ukfVu_I/0.jpg)](https://youtu.be/lAq4ukfVu_I)
+## check on the image to watch demo
+[![Watch the demo](https://img.youtube.com/vi/lAq4ukfVu_I/0.jpg)](https://youtu.be/lAq4ukfVu_I)  
 
 ## Key Features:
 
